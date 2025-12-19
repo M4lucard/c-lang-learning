@@ -61,3 +61,105 @@ printf uses format specifiers:
     %c for char
 
     %zu for size_t
+
+## Code example:
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int apples = 5;
+    int bananas = 2;
+    double price = 0.40;
+    char initial = 'G';
+
+    int total_fruit = apples + bananas;
+    double avg_per_type = total_fruit / 2.0;
+    double total_cost = total_fruit * price;
+
+    printf("apples=%d bananas=%d\n", apples, bananas);
+    printf("total_fruit=%d\n", total_fruit);
+    printf("avg_per_type=%f\n", avg_per_type);
+    printf("total_cost=%f\n", total_cost);
+    printf("initial=%c\n", initial);
+
+    return 0;
+}
+```
+
+
+# Lesson 3 - Expressions, operators, and precedence
+
+An expression is something C can evaluate to a value (like apples + bananas).
+
+## Common operators:
+
+    Arithmetic: + - * / %
+
+    Assignment: =, compound: += -= *= /= %=
+
+    Increment/decrement: ++ -- (careful: prefix vs postfix)
+
+    Comparisons: == != < <= > >=
+
+    Logical: && || !
+
+## Precedence 
+
+Precedence decides how expressions group without parentheses
+
+## Code Examples:
+
+### Example A: integer division + remainder
+```c
+#include <stdio.h>
+
+int main(void) {
+    int a = 17, b = 5;
+    printf("a/b=%d\n", a / b);  // 3
+    printf("a%%b=%d\n", a % b); // 2
+    return 0;
+}
+
+```
+
+### Example B: compound assignments
+```c
+#include <stdio.h>
+
+int main(void) {
+    int x = 10;
+    x += 3;  // x = x + 3
+    x *= 2;  // x = x * 2
+    printf("x=%d\n", x); // 26
+    return 0;
+}
+
+```
+
+### Example C: prefix vs postfix increment
+```c
+#include <stdio.h>
+
+int main(void) {
+    int x = 5;
+    printf("%d\n", x++); // prints 5, then x becomes 6
+    printf("%d\n", ++x); // x becomes 7, prints 7
+    return 0;
+}
+
+```
+
+### Example D: comparisons + logical operators
+```c
+#include <stdio.h>
+
+int main(void) {
+    int temp = 35;
+    if (temp > 30 && temp < 40) {
+        printf("warm\n");
+    }
+    return 0;
+}
+
+```
