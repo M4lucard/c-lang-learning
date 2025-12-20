@@ -163,3 +163,49 @@ int main(void) {
 }
 
 ```
+
+# Lesson 4 - Control Flow
+Control flow is how your program decides what to do next: conditionals choose a path, loops repeat work.
+
+- `if / else`
+- `while`
+- `for`
+- `break` and `continue`
+
+## Code Examples - Control Flow
+
+### if - else
+
+```c
+int x = 7;
+if (x > 10) {
+    printf("big\n");
+} else {
+    printf("not big\n");
+}
+```
+
+### while
+```c
+int i = 0;
+while (i < 3) {
+    printf("i=%d\n", i);
+    i++;
+}
+```
+
+### for
+```c
+for (int i = 0; i < 3; i++) {
+    printf("i=%d\n", i);
+}
+```
+
+### break and continue
+```c
+for (int i = 0; i < 5; i++) {
+    if (i == 2) continue;   // skip printing 2
+    if (i == 4) break;      // stop early
+    printf("%d\n", i);
+}
+```
